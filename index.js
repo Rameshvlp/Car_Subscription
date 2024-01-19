@@ -1,8 +1,12 @@
-sum();
+const express = require('express');
+const app = express();
 
-function sum(n=9){
-    let ans=n*n;
-    console.log(ans);
-}
+app.get('/dashboard', (req, res)=>{
+    res.send("dashboard page")
+})
+
+app.listen(8000, ()=>{
+    console.log("Server Listening on port");
+})
 
 
