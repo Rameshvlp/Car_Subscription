@@ -1,17 +1,21 @@
-const {getDb, getCollection}= require("./connection");
+const {getCollection}= require("./connection");
 
-function insertCar(model, ){
+function insertCar(model, fuelType, seaterType ){
+    const collection=getCollection( "car_model");
+    collection.insertOne({model:model, fuelType:fuelType, seaterType:seaterType})
 
 }
 
+
 function carModel(id){
-    const database=getDb("car_Subscription");//creating database name
-    const collection=getCollection(database, "car_models");//creating collection name for an particular database
+    const collection=getCollection("car_models");//creating collection name for an particular database
     return collection.find({_id:id}).toArray();// returning an collection into an array with id 
 
 }
 
+module.exports={insertCar}
+
 
 carModel();
 
-module.exports(carModel);
+module.exports={carModel, insertCar};

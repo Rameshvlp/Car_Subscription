@@ -1,20 +1,11 @@
 const {MongoClient} = require('mongodb');
-function connect(){
-    const client =  new MongoClient("mongodb://127.0.0.1:27017");
-    client.connect();
-    return client;
-}
- 
 
-function getDb(dbName){
-    client.connect();
-    const database = client.db(dbName);
-    return database;
-}
+const client =  new MongoClient("mongodb://127.0.0.1:27017");
+const database = client.db("car_Subsription");
 
-function getCollection(database, collectionName){
+function getCollection(collectionName){
     return database.collection(collectionName);
 
 }
-module.exports(getCollection,getDb);
+module.exports={getCollection};
 
