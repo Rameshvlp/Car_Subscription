@@ -1,17 +1,24 @@
 const express = require("express")
 const route =  express.Router();   
 const path = require('path');
-const {insertc} = require("../sevices/carService")   
+const {insertc, retrive} = require("../sevices/carService") 
 
 route.get("/", (req, res)=>{
-    res.send("dashboard's home page")
+    res.sendFile(path.join(__dirname, '../FrontEnd', 'Retrive.html'))
+
+});
+route.get("/retrive", (req, res)=>{
+
+     retrive(req, res);
 })
+
 
 route.get("/car", (req, res)=>{
     res.sendFile(path.join(__dirname, '../FrontEnd','index.html'))
 })
 
 route.post("/submitform", (req, res)=>{
+    console.log(req.body);
     insertc(req,res);
     res.send("car models created sucessfully")
 
