@@ -1,8 +1,8 @@
 const {getCollection}= require('./connection');
 
-function insertUser(Name, age, phoneNumber, address, licenceNo){
+function insertUser(UserName, Age, PhoneNumber, Address, LicenceNo){
     const collection =getCollection("CustomerDetails");
-    collection.insertOne({Name:Name, Age:age, phoneNumber:phoneNumber, address:address, licenceNo:licenceNo});
+    collection.insertOne({Name:UserName, Age:Age, PhoneNumber:PhoneNumber, Address:Address, LicenceNo:LicenceNo});
 
 }
 

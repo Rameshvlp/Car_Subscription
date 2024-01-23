@@ -1,5 +1,5 @@
 const express = require("express")
-const route =  express.Router();
+const route =  express.Router();   
 const path = require('path');
 const {insertc} = require("../sevices/carService")   
 
@@ -13,7 +13,7 @@ route.get("/car", (req, res)=>{
 
 route.post("/submitform", (req, res)=>{
     insertc(req,res);
-    res.send(req.body)
+    res.send("car models created sucessfully")
 
 })   
 

@@ -11,12 +11,10 @@ const carroute = require("./routes/carroute");
 
 
 app.use('/dash', carroute)
-// app.use('/feed', feedroute )
-
-app.get('/', userRoute)
+app.use('/', userRoute)
 
 
-app.listen(8000, ()=>{
+app.listen(5000, ()=>{
     console.log("Server Listening on port");
 })
 
