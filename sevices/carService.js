@@ -1,11 +1,11 @@
-const {insertCar} = require("../Daos/cardao")
+const {insertCar, RetriveCar} = require("../Daos/cardao")
 
 function insertc(req,res)
 {
     insertCar(req.body.model, req.body.fueltype, req.body.seater);
 }
- function retrive(req, res){
-    res.send("hello")
+ function retriveC(req, res){
+    RetriveCar().then((msg)=>res.send(msg));
 
  }
-module.exports = {insertc, retrive}
+module.exports = {insertc, retriveC}

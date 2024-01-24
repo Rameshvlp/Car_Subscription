@@ -7,12 +7,14 @@ function insertCar(model, fuelType, seaterType ){
 }
 
 
-function carModel(id){
-    const collection=getCollection("car_models");//creating collection name for an particular database
-    return collection.find({_id:id}).toArray();// returning an collection into an array with id 
+
+async function RetriveCar()
+{
+    const collection=  getCollection("car_model");//creating collection name for an particular database
+    return  await collection.find({}).toArray();// returning an collection into an array with id 
 
 }
 
 
 
-module.exports={carModel, insertCar};
+module.exports={RetriveCar, insertCar};

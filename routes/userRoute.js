@@ -10,7 +10,7 @@ route.get('/', (req, res)=>{
 route.post("/submitform", (req, res)=>{
     
     insertU(req,res);
-    res.send("User Created SucessFully")
+    res.send("yu")
 })
 
 module.exports=route;

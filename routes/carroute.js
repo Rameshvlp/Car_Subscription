@@ -1,7 +1,7 @@
 const express = require("express")
 const route =  express.Router();   
 const path = require('path');
-const {insertc, retrive} = require("../sevices/carService") 
+const {insertc, retriveC} = require("../sevices/carService") 
 
 route.get("/", (req, res)=>{
     res.sendFile(path.join(__dirname, '../FrontEnd', 'Retrive.html'))
@@ -9,8 +9,13 @@ route.get("/", (req, res)=>{
 });
 route.get("/retrive", (req, res)=>{
 
-     retrive(req, res);
+     retriveC(req, res);
 })
+// route.get("/retrive/data", (req, res)=>{
+
+//     retriveC(req, res);
+// })
+
 
 
 route.get("/car", (req, res)=>{
