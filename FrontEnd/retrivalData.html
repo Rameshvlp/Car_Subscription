@@ -4,6 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AngularJS</title>
+    <style> 
+         .card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 30px;
+        width: 300px;
+         }
+         button{
+            background-color: #fc3838;
+            color: #fff;
+         }
+         button:hover{
+            background-color: rgb(136, 211, 61);
+            color: black;
+         }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
   </head>
   <body ng-app="form" ng-controller="form-control">
@@ -11,15 +27,14 @@
       const app = angular.module("form", []);
       app.controller("form-control", ($scope, $http, $window) => 
       {
-        $http.post(`${$window.location.href}`).then((msg) => $scope.obj = msg.data);
+        $http.post('http://localhost:8000/dash/retrive').then((msg) => $scope.obj = msg.data);
       });
     </script>
-    <form>
-      <div ng-repeat="i in obj">
-        <li>{{i.model}}</li>
-        <li>{{i.fuelType}}</li>
-        <li>{{i.seaterType}}</li>
+      <div ng-repeat="i in obj" class="card">
+        <h2>Car Model: {{i.model}}</h2>
+        <h2>Fuel Type: {{i.fuelType}}</h2>
+        <h2>Seater Type: {{i.seaterType}}</h2>
+             <button type="submit" >Subscribe Car for 6 month</button>
       </div>
-    </form>
   </body>
 </html>
