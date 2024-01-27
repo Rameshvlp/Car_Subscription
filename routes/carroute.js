@@ -7,17 +7,17 @@ route.get("/", (req, res)=>{
     res.sendFile(path.join(__dirname, '../FrontEnd', 'Retrive.html'))
 
 });
-route.get("/retrive", (req, res)=>{
 
-     retriveC(req, res);
+route.get("/retrive", (req, res)=>
+{
+res.sendFile(path.join(__dirname, '../FrontEnd', 'retrivalData.html'))
 })
-// route.get("/retrive/data", (req, res)=>{
+route.post("/retrive", (req, res)=>{
 
-//     retriveC(req, res);
-// })
-
-
-
+retriveC(req, res);
+}
+)
+    
 route.get("/car", (req, res)=>{
     res.sendFile(path.join(__dirname, '../FrontEnd','index.html'))
 })

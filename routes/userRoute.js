@@ -10,7 +10,9 @@ route.get('/', (req, res)=>{
 route.post("/submitform", (req, res)=>{
     
     insertU(req,res);
-    res.send("yu")
+    //res.send("welcome" + " " +  req.body.Name)
+    res.sendFile(path.join(__dirname, '../FrontEnd', 'Retrive.html'),"welcome" + " " +  req.body.Name )
+
 })
 
 module.exports=route;
