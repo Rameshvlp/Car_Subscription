@@ -10,7 +10,7 @@ const carroute = require("./routes/carroute");
 
 
 
-app.use('/dash', carroute);
+app.use('/:username/dash', carroute);
 
 app.use('/', userRoute)
 

@@ -26,10 +26,16 @@
     <script>
       const app = angular.module("form", []);
       app.controller("form-control", ($scope, $http, $window) => 
-      {
-        $http.post('http://localhost:8000/dash/retrive').then((msg) => $scope.obj = msg.data);
+      { 
+        $scope.name = $window.location.pathname.split("/")[1]
+        $http.post(`${$window.location.href}`).then((msg) => {
+          console.log(msg)
+          $scope.obj = msg.data
+       
+        });
       });
-    </script>
+    </script> 
+    
       <div ng-repeat="i in obj" class="card">
         <h2>Car Model: {{i.model}}</h2>
         <h2>Fuel Type: {{i.fuelType}}</h2>

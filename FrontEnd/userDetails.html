@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Details</title>
-
-    <style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -21,7 +21,6 @@
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         label {
@@ -44,24 +43,48 @@
         }
     </style>
 </head>
-<body>
-    <form action="/submitform" method="post">
+<body ng-app="myapp" ng-controller="mycontroller">
+    <div>
+<script>
+const app = angular.module("myapp",[])
+app.controller("mycontroller",function($scope,$http,$window)
+{
+    $scope.createUser = function()
+    {
+        $http.post("/submitform",{Name:$scope.Name,Age:$scope.Age,PhoneNumber:$scope.PhoneNumber,Address:$scope.Address,LicenceNo:$scope.LicenceNo}).then((data)=>
+        {
+            console.log(data)
+            if(data.data.success)
+            {
+                $window.location.href = `${$scope.Name}/dash`
+            }
+            else
+            {
+                alert("something went wrong")
+            }
+        })
+    }
+})
+
+</script>
+    <form >
         <label>UserName:</label>
-        <input name="Name" type="text">
+        <input ng-model="Name" type="text" required>
         
         <br><label>Age:</label>
-        <input name="Age" type="number">
+        <input ng-model="Age" type="number" >
     
         <br><label>PhoneNumber:</label>
-        <input name="PhoneNumber" type="number">
+        <input ng-model="PhoneNumber" type="number" >
     
         <br><label>Address:</label>
-        <input name="Address" type="text">
+        <input ng-model="Address" type="text" >
     
         <br><label>LicenceNo:</label>
-        <input name="LicenceNo" type="text">
+        <input ng-model="LicenceNo" type="text">
         
-        <br><br><button type="submit">Create User</button>
+        <br><br><button ng-click="createUser()" type="button">Create User</button>
     </form>
+</div>
 </body>
 </html>
