@@ -1,0 +1,110 @@
+//user schema
+
+//user details got stored in db 
+
+
+[
+    {
+        "name":{                 // used in maintaining the session for subscribing the car
+            "type":"string",
+            "required":true
+        },
+        "Age":{
+            "type":"string",
+            "required":true
+        },
+         "phoneNumber":{
+               "type": "string",
+            "requiured":true
+        },
+        "Address":{
+            "type":"string",
+            "required":true
+        },
+        "LicenceNumber":{
+            "type":"string",
+            "required":true
+        }
+    },
+    {
+        //car models schema
+
+        // car models are added by the admin 
+
+        "CarModel":{
+            "type":"string",
+            "required":true
+        },
+        "FuelType":{
+            "type":"string",
+            "required":true
+        },
+        "SeaterType":{
+            "type":"string",
+            "required":true
+        }
+
+    },
+
+
+    // car Subscription schema with Customer details
+    {
+        "customers": [
+          {
+            "_id":"customer_id",
+            "name": "Customer Name",
+            "Address": "Address",
+            "phone": "number",
+            "cars": [
+              {
+                "_id": "car_id",
+                "madel": "Car Make",
+                "SeaterType": "type of seat",
+                "year": 2024,
+                "subscriptions":
+                  {
+                    "startDate": "Date of Subscription",
+                    "endDate": "Date of Expiry",
+                    "priceOfSubscription": "amount" 
+                  }
+              }
+            ]
+          }
+        ]
+      },
+            //Unscription details
+
+            {
+                "customers": [
+                    {
+                      "_id":"customer_id",//contains the customer details
+                     
+                      "phone": "number",
+
+                      "cars": [  
+                        {
+                          "_id": "car_id",   //contains the car owned by the particular customer
+                          "subscriptions": [
+                            {
+                              "startDate": "Date of Subscription",
+                              "endDate": "Date of Expiry",
+                              "priceOfSubscription": "amount" ,
+                              "cancellationDetails": {
+                              "cancellationDate": "Breakage of Subscription",
+                              "kmDriven": 20000,
+                              "chargePerDay": "300rs",
+                              "benchmarkKilometers": 30000,
+                              "penaltyPerExcessKm":"200rs",
+                              "damageReason":"ReasonForDamage" 
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+              
+
+    
+]

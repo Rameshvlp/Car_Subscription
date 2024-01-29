@@ -15,9 +15,9 @@ res.sendFile(path.join(__dirname, '../FrontEnd', 'retrivalData.html'))
 
 route.post("/retrive", (req, res)=>{
 
-retriveC(req, res);
+retriveC(req, res); 
 }
-)
+);
     
 route.get("/car", (req, res)=>{
     res.sendFile(path.join(__dirname, '../FrontEnd','index.html'))
