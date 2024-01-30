@@ -26,7 +26,7 @@
             "required":true
         }
     },
-    {
+    { 
         //car models schema
 
         // car models are added by the admin 
@@ -48,62 +48,63 @@
 
 
     // car Subscription schema with Customer details
+
     {
-        "customers": [
+        "customers": 
           {
             "_id":"customer_id",
             "name": "Customer Name",
             "Address": "Address",
             "phone": "number",
-            "cars": [
+            "cars": 
               {
-                "_id": "car_id",
-                "madel": "Car Make",
+                "Car_id": "car_id",
+                "model": "Car Model",
                 "SeaterType": "type of seat",
-                "year": 2024,
+                "year": "2024",
                 "subscriptions":
                   {
+                    "Subscription_id":"ObjectId()",//Subscription Pricing id ,
+                    "Tenure":"period of Subscription",
                     "startDate": "Date of Subscription",
                     "endDate": "Date of Expiry",
+                    "kmAlloted":"km_alloted",
                     "priceOfSubscription": "amount" 
                   }
               }
-            ]
           }
-        ]
       },
-            //Unscription details
+                  // subscription Expiry Schema  
 
-            {
-                "customers": [
-                    {
-                      "_id":"customer_id",//contains the customer details
-                     
-                      "phone": "number",
+                  {
 
-                      "cars": [  
-                        {
-                          "_id": "car_id",   //contains the car owned by the particular customer
-                          "subscriptions": [
-                            {
-                              "startDate": "Date of Subscription",
-                              "endDate": "Date of Expiry",
-                              "priceOfSubscription": "amount" ,
-                              "cancellationDetails": {
-                              "cancellationDate": "Breakage of Subscription",
-                              "kmDriven": 20000,
-                              "chargePerDay": "300rs",
-                              "benchmarkKilometers": 30000,
-                              "penaltyPerExcessKm":"200rs",
-                              "damageReason":"ReasonForDamage" 
-                            }
-                          }
-                        ]
-                      }
-                    ]
+                    "customers_id":"customer_id",
+                    "Car_id":"car_id",
+                    "Subscription_id":"Subscription_id",
+                    "chargePerDay": "100rs",
+                    "chargePerKm":"50",
+                    "benchmarked_Kilometers":"30000km",
+                    "km_driven":"km_driven",
+                    "penaltyPerExcessKm":"200rs",
+                    "AmountPayable":"Amount"
+                  },
+
+                  //Breakage of Subscription details
+
+                  {
+                    
+                    "customers_id":"customer_id",
+                    "Car_id":"car_id",
+                    "Subscription_id":"Subscription_id",
+                    "CancellationDate":"Date",
+                    "CancellationReason":"Reason",
+                    "km_driven":"km_driven",
+                    "benchmarked_Kilometers":"30000km",
+                    "chargePerDay":"100rs",
+                    "chargePerKm":"50",
+
                   }
-                ]
-              }
+             
               
 
     

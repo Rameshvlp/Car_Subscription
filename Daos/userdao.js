@@ -8,4 +8,4 @@ function insertUser(UserName, Age, PhoneNumber, Address, LicenceNo){
 }
 
 
-module.exports={insertUser};
+module.exports={insertUser}; 
