@@ -1,2 +1,0 @@
-const{getCollection}= require('./connection')
-

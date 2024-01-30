@@ -1,0 +1,7 @@
+{
+    "Customer_name":"Customer_name",//string
+    "Age":"age",//Integer
+     "phoneNumber":"phoneNumber",//Integer
+    "Address":"Customer_Address",//string
+    "LicenceNumber":"LicenceNumber"//number
+}

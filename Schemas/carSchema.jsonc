@@ -1,0 +1,17 @@
+//car models schema
+
+ 
+// car models are added by the admin 
+
+
+{
+        "CarModel":"Model_Name", //string
+        
+        "FuelType":"FuelType", //string
+
+        "SeaterType":"SeaterType", //integer
+
+        "Car_price":"price varies based on car model" //integer
+
+        
+        }

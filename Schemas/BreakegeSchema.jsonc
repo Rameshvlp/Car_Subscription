@@ -1,0 +1,22 @@
+ 
+ //Breakage of Subscription details
+
+ {
+                    
+    "customers_id":"customer_id",
+    "Car_id":"car_id",
+    "Subscription_id":"Subscription_id",
+    "CancellationDate":"Date",
+    "CancellationReason":"Reason",
+    "cancellationStatus": "processed",
+    "km_driven":"km_driven",
+    "benchmarked_Kilometers":30000,
+    "chargePerDay":100,
+    "chargePerKm":5,
+    "minimalAmountReduction":3000,
+    "Amount": 0  //based on estimated 165000 
+    // if the amount is 57000 - 165000 = -108000 (Amount payable) -minmal amount will be reduced .
+    // if the customer exceeded the km driven then 182000-16500 = 17000 (Amount recievable)
+
+  }
+                
