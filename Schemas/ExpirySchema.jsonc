@@ -4,19 +4,19 @@
     "customers_id":"customer_id",
     "Car_id":"car_id",
     "Subscription_id":"Subscription_id",
-    "benchmarked_Kilometers":30000,   
+    "benchmarked_Km":30000,   
     "km_driven":"km_driven",
     "penaltyPerExcessKm":200,
     "AmountPayable":"Amount",
     "subscriptionStatus": "expired",
     "UsageCharges": {
-        "perDayCharge": 100 , //5 months minimum period ( 15,000 ) varies on car model.
-        "perKmCharge": 5    // (150000) varies on car model.
+        "perDayCharge": 100, //5 months minimum period ( 15,000 ) varies on car model.
+        "perKmCharge": 5  // (150000) varies on car model.
     },
+
     "Amount":"amount" //estimated 165000
 
-    
-
   }
+
 
 

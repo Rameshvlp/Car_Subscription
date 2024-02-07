@@ -1,21 +1,15 @@
 {
-    "customers": 
-      {
-        "_id":"customer_id",
-
-        "cars": 
-          {
+            "customers_id":"customer_id", 
             "Car_id": "car_id",
             "year": 2024,
             "subscriptions":    //Subscription Pricing id ,
               {
-                "Tenure":"period of Subscription",
+                "Tenure":"period of Subscription", //5months
                 "startDate": "Date of Subscription",
                 "endDate": "Date of Expiry",              //minimum subscription period is 5 months
                 "kmAlloted":"km_alloted",
                 "priceOfSubscription": "amount",
+                "initial_amount":1,//initial amount payable
                 "subscriptionStatus": "active or expired or cancelled"
               }
           }
-      }
-  } 

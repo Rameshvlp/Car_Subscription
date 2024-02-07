@@ -6,8 +6,6 @@ function insertCar(model, fuelType, seaterType ){
 
 }
 
-
-
 async function RetriveCar()
 {
     const collection=  getCollection("car_model");//creating collection name for an particular database

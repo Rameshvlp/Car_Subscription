@@ -1,0 +1,46 @@
+{
+  "car_id": "string",
+  "name": "string",
+  "year_of_launch": "number",
+  
+  "sales": {
+
+    "2021": {
+      "quantity": "number",
+      "price": "number"
+    },
+    "2022": {
+      "quantity": "number",
+      "price": "number"
+    },
+    "2023": {
+      "quantity": "number",
+      "price": "number"
+    }
+    
+  }
+}
+
+{
+  "year":{
+    "car_id":"car_id"//number 
+  }
+}   
+
+
+//   {
+//     "car_id": "id",
+//     "name": "Car",
+//     "year_of_launch": 2023,
+//     "sales": [
+//       {
+//         "year": 2023,
+//         "quantity": 50
+//       },
+//       {
+//         "year": 2024,
+//         "quantity": 75
+//       }
+//     ]
+// }
+  
